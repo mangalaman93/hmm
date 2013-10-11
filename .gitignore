@@ -1,5 +1,7 @@
 *.o
+*.out
 *.corp
 hmm
+bnc
 BNC/
-
+BNC_*CLEANED/
