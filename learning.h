@@ -11,13 +11,13 @@
 #include <cstdlib>
 using namespace std;
 
-#define START_TAG "start"
-#define END_TAG "end"
+#define START_TAG "starttag"
+#define END_TAG "endtag"
 #define NO_TAG "notag"
 #define TO_MERGE true
 
 class TagMap {
-	map<string, int> table;
+    map<string, int> table;
 
   public:
 	TagMap();
@@ -25,6 +25,7 @@ class TagMap {
 	int incrementAt(string tag);
 	float getProbAt(string tag);
 	void print(ofstream& wfile);
+    int getNumTags();
 };
 typedef TagMap* TagMapPtr;
 
@@ -48,16 +49,18 @@ class Repository {
 	list<string> corpus;
 	map<DimString, int, DimString> trans_table;
 	map<string, TagMapPtr> obs_table;
+    map<string, bool> tags;
 	
 	string toLowerStr(string str);
 	void increTransTable(string tag1, string tag2);
 	void modifyTables(string word, string old_tag, string tag);
+    int getTransVal(string tag1, string tag2);
 
   public:
 	Repository(string name);
 	void addFile(string file_name);
 	void dumpAll();
-	// string viterbi(string sent);
+	string viterbi(string sent);
 };
 
 #endif
