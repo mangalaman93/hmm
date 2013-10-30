@@ -34,7 +34,8 @@ list<string> getTagList(string str)
 	return tags;
 }
 
-void runTest(Repository r, string file_name, map<string, float> &acc, map<string, float> &tot, map<DimString, float> &conf, Data *d) {
+void runTest(Repository r, string file_name, map<string, float> &acc, map<string, float> &tot,
+				map<DimString, float, DimString> &conf, Data *d) {
 	//calculating precision and recall
 	ifstream file(file_name.c_str());
 	file.is_open();
@@ -50,7 +51,7 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 		string sent = "";
 		int first = 0;
 		for(int i=0; i<=line.length(); i++) {
-			if(line[i] == ' ' || line[i] == '\t' || i == line.length()) {
+			if(i == line.length() || line[i] == ' ' || line[i] == '\t') {
 				if(first != 0)
 					sent.append(" ");
 				sent.append(line.substr(first, i-first-2));
@@ -61,6 +62,12 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 		list<string> ob_tags = getTagList(out);
 
 		int size = given_tags.size();
+		if(size != ob_tags.size())
+		{
+			cout<<"error occurred!! exiting..."<<endl;
+			exit(1);
+		}
+
 		for(int i=0; i<size; i++)
 		{
 			d->R++;
@@ -87,7 +94,7 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 
 int main()
 {
-	string dir_name = "BNC_SMALL/";
+	string dir_name = "BNC_SMALL";
 	list<string> files;
 
 	DIR *dir;
@@ -95,7 +102,7 @@ int main()
 	if((dir = opendir(dir_name.c_str())) != NULL) {
 		while ((ent = readdir(dir)) != NULL) {
 			if(string(ent->d_name).find(".txt") != string::npos)
-				files.push_back(dir_name + string("_CLEANED") + string(ent->d_name));
+				files.push_back(dir_name + string("_CLEANED/") + string(ent->d_name));
 		}
 	  	closedir (dir);
 	}
@@ -120,17 +127,20 @@ int main()
 		{
 			r.addFile(*it);
 		}
+		r.dumpAll();
 
 		// testing begins
 		map<string, float> acc;
 		map<string, float> tot;
-		map<DimString, float> conf;
-		Data* d = new Data(0, 0, 0);
+		map<DimString, float, DimString> conf;
+		Data* data = new Data(0, 0, 0);
 		for(list<string>::iterator it=test.begin(); it!=test.end(); ++it)
 		{
-			runTest(r, *it, acc, tot, conf, d);
+			runTest(r, *it, acc, tot, conf, data);
 		}
 
-		r.dumpAll();
+		cout<<"precision: "<<(data->P)/(data->T)<<endl;
+        cout<<"recall: "<<(data->P)/(data->R)<<endl;
+        cout<<"F value: "<<2*(data->P)/((data->T)+(data->R))<<endl;
 	}
 }
