@@ -296,7 +296,7 @@ string Repository::viterbi(string sent) {
 	string out;
 	for(list<string>::iterator iter=tag_list[max_index].begin(); iter!=tag_list[max_index].end(); iter++) {
 		if(*iter == NO_TAG)
-			out.append("X");
+			out.append(NO_TAG);
 		else
 			out.append(*iter);
 		out.append("_");

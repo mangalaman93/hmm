@@ -48,10 +48,12 @@ bool isEqual(string given, string obs) {
 			return ((toLowerStr(obs) == toLowerStr(given.substr(0, i))) || (toLowerStr(obs) == toLowerStr(given.substr(i+1, given.length()-i-1))));
 		}
 	}
+
+	return (toLowerStr(given) == toLowerStr(obs));
 }
 
-void runTest(Repository r, string file_name, map<string, float> &acc, map<string, float> &tot,
-				map<DimString, float, DimString> &conf, Data *d) {
+void runTest(Repository r, string file_name, map<string, int> &acc, map<string, int> &tot,
+				map<DimString, int, DimString> &conf, Data *d) {
 	//calculating precision and recall
 	ifstream file(file_name.c_str());
 	file.is_open();
@@ -101,6 +103,8 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 			if(isEqual(given_tags.front(), ob_tags.front())) {
 				d->P++;
 				acc[given_tags.front()]++;
+			} else {
+				// cout<<"Wrong: "<<endl<<"\t"<<"given: "<<line<<endl<<"\t"<<"obs: "<<out<<endl<<endl;
 			}
 			d->T++;
 			given_tags.pop_front();
@@ -111,7 +115,7 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 
 int main()
 {
-	string dir_name = "BNC_SMALL";
+	string dir_name = "BNC";
 	list<string> files;
 
 	DIR *dir;
@@ -148,9 +152,9 @@ int main()
 		cout<<"training complete..."<<endl;
 
 		// testing begins
-		map<string, float> acc;
-		map<string, float> tot;
-		map<DimString, float, DimString> conf;
+		map<string, int> acc;
+		map<string, int> tot;
+		map<DimString, int, DimString> conf;
 		Data* data = new Data(0, 0, 0);
 		for(list<string>::iterator it=test.begin(); it!=test.end(); ++it)
 		{
@@ -159,7 +163,7 @@ int main()
 		}
 
 		cout<<"precision: "<<(data->P)/(data->T)<<endl;
-        cout<<"recall: "<<(data->P)/(data->R)<<endl;
+		cout<<"recall: "<<(data->P)/(data->R)<<endl;
         cout<<"F value: "<<2*(data->P)/((data->T)+(data->R))<<endl;
 	}
 }
