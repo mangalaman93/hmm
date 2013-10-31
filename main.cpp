@@ -34,6 +34,22 @@ list<string> getTagList(string str)
 	return tags;
 }
 
+string toLowerStr(string str) {
+	string out = str;
+	for(int i =0; i<str.length(); i++) {
+		out[i] = tolower(str[i]);
+	}
+	return out;
+}
+
+bool isEqual(string given, string obs) {
+	for(int i=0; i<given.length(); i++) {
+		if(given[i] == '-') {
+			return ((toLowerStr(obs) == toLowerStr(given.substr(0, i))) || (toLowerStr(obs) == toLowerStr(given.substr(i+1, given.length()-i-1))));
+		}
+	}
+}
+
 void runTest(Repository r, string file_name, map<string, float> &acc, map<string, float> &tot,
 				map<DimString, float, DimString> &conf, Data *d) {
 	//calculating precision and recall
@@ -54,7 +70,8 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 			if(i == line.length() || line[i] == ' ' || line[i] == '\t') {
 				if(first != 0)
 					sent.append(" ");
-				sent.append(line.substr(first, i-first-2));
+				sent.append(line.substr(first, i-first));
+			} else if( line[i] == '_') {
 				first = i+1;
 			}
 		}
@@ -81,7 +98,7 @@ void runTest(Repository r, string file_name, map<string, float> &acc, map<string
 			string s2 = ob_tags.front();
 			conf[DimString(s1, s2)]++;
 			tot[given_tags.front()]++;
-			if(given_tags.front() == ob_tags.front()) {
+			if(isEqual(given_tags.front(), ob_tags.front())) {
 				d->P++;
 				acc[given_tags.front()]++;
 			}
@@ -128,6 +145,7 @@ int main()
 			r.addFile(*it);
 		}
 		r.dumpAll();
+		cout<<"training complete..."<<endl;
 
 		// testing begins
 		map<string, float> acc;
@@ -136,6 +154,7 @@ int main()
 		Data* data = new Data(0, 0, 0);
 		for(list<string>::iterator it=test.begin(); it!=test.end(); ++it)
 		{
+			cout<<"testing "<<*it<<" ..."<<endl;
 			runTest(r, *it, acc, tot, conf, data);
 		}
 
