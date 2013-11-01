@@ -115,7 +115,7 @@ void runTest(Repository r, string file_name, map<string, int> &acc, map<string, 
 
 int main()
 {
-	string dir_name = "BNC_SMALL";
+	string dir_name = "BNC";
 	list<string> files;
 
 	DIR *dir;
