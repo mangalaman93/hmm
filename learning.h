@@ -61,6 +61,7 @@ class Repository {
 	void addFile(string file_name);
 	void dumpAll();
 	string viterbi(string sent);
+    map<string, bool> getTagList() {return tags;}
 };
 
 #endif
