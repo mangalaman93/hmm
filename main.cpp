@@ -98,7 +98,7 @@ void runTest(Repository r, string file_name, map<string, int> &acc, map<string, 
 
 			string s1 = given_tags.front();
 			string s2 = ob_tags.front();
-			conf[DimString(s1, s2)]++;
+			// conf[DimString(s1, s2)]++;
 			tot[given_tags.front()]++;
 			if(isEqual(given_tags.front(), ob_tags.front())) {
 				d->P++;
@@ -166,22 +166,22 @@ int main()
 		cout<<"recall: "<<(data->P)/(data->R)<<endl;
         cout<<"F value: "<<2*(data->P)/((data->T)+(data->R))<<endl;
 
-        map<string, bool> tags = r.getTagList();
-        cout<<endl<<"CONFUSION MATRIX:"<<endl;
-        for(map<string, bool>::iterator it=tags.begin(); it!=tags.end(); ++it)
-        {
-        	cout<<"\t"<<it->first;
-        }
-        cout<<endl;
-        for(map<string, bool>::iterator iit=tags.begin(); iit!=tags.end(); ++iit)
-        {
-        	cout<<iit->first<<"\t";
-        	for(map<string, bool>::iterator kit=tags.begin(); kit!=tags.end(); ++kit)
-        	{
-        		cout<<conf[DimString(iit->first, kit->first)]<<"\t";
-        	}
-        	cout<<endl;
-        }
-        cout<<"\n----------------------------------------"<<endl;
+        // map<string, bool> tags = r.getTagList();
+        // cout<<endl<<"CONFUSION MATRIX:"<<endl;
+        // for(map<string, bool>::iterator it=tags.begin(); it!=tags.end(); ++it)
+        // {
+        // 	cout<<"\t"<<it->first;
+        // }
+        // cout<<endl;
+        // for(map<string, bool>::iterator iit=tags.begin(); iit!=tags.end(); ++iit)
+        // {
+        // 	cout<<iit->first<<"\t";
+        // 	for(map<string, bool>::iterator kit=tags.begin(); kit!=tags.end(); ++kit)
+        // 	{
+        // 		cout<<conf[DimString(iit->first, kit->first)]<<"\t";
+        // 	}
+        // 	cout<<endl;
+        // }
+        // cout<<"\n----------------------------------------"<<endl;
 	}
 }
