@@ -1,0 +1,190 @@
+file: BNC_CLEANED/A8E.txt is processed!
+file: BNC_CLEANED/A9M.txt is processed!
+file: BNC_CLEANED/A45.txt is processed!
+file: BNC_CLEANED/A1A.txt is processed!
+file: BNC_CLEANED/A6L.txt is processed!
+file: BNC_CLEANED/A1F.txt is processed!
+file: BNC_CLEANED/A0A.txt is processed!
+file: BNC_CLEANED/A7S.txt is processed!
+file: BNC_CLEANED/A0V.txt is processed!
+file: BNC_CLEANED/A4W.txt is processed!
+file: BNC_CLEANED/A21.txt is processed!
+file: BNC_CLEANED/A5P.txt is processed!
+file: BNC_CLEANED/A57.txt is processed!
+file: BNC_CLEANED/AA2.txt is processed!
+file: BNC_CLEANED/A99.txt is processed!
+file: BNC_CLEANED/A10.txt is processed!
+file: BNC_CLEANED/A0G.txt is processed!
+file: BNC_CLEANED/A7J.txt is processed!
+file: BNC_CLEANED/A13.txt is processed!
+file: BNC_CLEANED/A82.txt is processed!
+file: BNC_CLEANED/A61.txt is processed!
+file: BNC_CLEANED/A0C.txt is processed!
+file: BNC_CLEANED/A58.txt is processed!
+file: BNC_CLEANED/A3H.txt is processed!
+file: BNC_CLEANED/A75.txt is processed!
+file: BNC_CLEANED/A4P.txt is processed!
+file: BNC_CLEANED/A53.txt is processed!
+file: BNC_CLEANED/A5F.txt is processed!
+file: BNC_CLEANED/A68.txt is processed!
+file: BNC_CLEANED/A3G.txt is processed!
+file: BNC_CLEANED/A48.txt is processed!
+file: BNC_CLEANED/A7H.txt is processed!
+file: BNC_CLEANED/A91.txt is processed!
+file: BNC_CLEANED/A3D.txt is processed!
+file: BNC_CLEANED/A2R.txt is processed!
+file: BNC_CLEANED/A8W.txt is processed!
+file: BNC_CLEANED/A93.txt is processed!
+file: BNC_CLEANED/A9D.txt is processed!
+file: BNC_CLEANED/AA3.txt is processed!
+file: BNC_CLEANED/A3J.txt is processed!
+file: BNC_CLEANED/A55.txt is processed!
+file: BNC_CLEANED/A2C.txt is processed!
+file: BNC_CLEANED/A6R.txt is processed!
+file: BNC_CLEANED/A3M.txt is processed!
+file: BNC_CLEANED/A8C.txt is processed!
+file: BNC_CLEANED/A3U.txt is processed!
+file: BNC_CLEANED/A22.txt is processed!
+file: BNC_CLEANED/A7X.txt is processed!
+file: BNC_CLEANED/A5L.txt is processed!
+file: BNC_CLEANED/A70.txt is processed!
+file: BNC_CLEANED/A00.txt is processed!
+Repository bnc4 dumped in file bnc4.corp!
+training complete...
+testing BNC_CLEANED/A50.txt ...
+testing BNC_CLEANED/A27.txt ...
+testing BNC_CLEANED/A46.txt ...
+testing BNC_CLEANED/A4F.txt ...
+testing BNC_CLEANED/A9C.txt ...
+testing BNC_CLEANED/A3R.txt ...
+testing BNC_CLEANED/A69.txt ...
+testing BNC_CLEANED/A8G.txt ...
+testing BNC_CLEANED/A05.txt ...
+testing BNC_CLEANED/A32.txt ...
+testing BNC_CLEANED/A1P.txt ...
+testing BNC_CLEANED/A95.txt ...
+precision: 0.582811
+recall: 0.561997
+F value: 0.572215
+file: BNC_CLEANED/A8E.txt is processed!
+file: BNC_CLEANED/A9M.txt is processed!
+file: BNC_CLEANED/A45.txt is processed!
+file: BNC_CLEANED/A1A.txt is processed!
+file: BNC_CLEANED/A6L.txt is processed!
+file: BNC_CLEANED/A1F.txt is processed!
+file: BNC_CLEANED/A0A.txt is processed!
+file: BNC_CLEANED/A7S.txt is processed!
+file: BNC_CLEANED/A0V.txt is processed!
+file: BNC_CLEANED/A4W.txt is processed!
+file: BNC_CLEANED/A21.txt is processed!
+file: BNC_CLEANED/A5P.txt is processed!
+file: BNC_CLEANED/A57.txt is processed!
+file: BNC_CLEANED/AA2.txt is processed!
+file: BNC_CLEANED/A99.txt is processed!
+file: BNC_CLEANED/A10.txt is processed!
+file: BNC_CLEANED/A0G.txt is processed!
+file: BNC_CLEANED/A7J.txt is processed!
+file: BNC_CLEANED/A13.txt is processed!
+file: BNC_CLEANED/A82.txt is processed!
+file: BNC_CLEANED/A61.txt is processed!
+file: BNC_CLEANED/A0C.txt is processed!
+file: BNC_CLEANED/A58.txt is processed!
+file: BNC_CLEANED/A3H.txt is processed!
+file: BNC_CLEANED/A75.txt is processed!
+file: BNC_CLEANED/A4P.txt is processed!
+file: BNC_CLEANED/A53.txt is processed!
+file: BNC_CLEANED/A5F.txt is processed!
+file: BNC_CLEANED/A68.txt is processed!
+file: BNC_CLEANED/A3G.txt is processed!
+file: BNC_CLEANED/A48.txt is processed!
+file: BNC_CLEANED/A7H.txt is processed!
+file: BNC_CLEANED/A91.txt is processed!
+file: BNC_CLEANED/A3D.txt is processed!
+file: BNC_CLEANED/A2R.txt is processed!
+file: BNC_CLEANED/A8W.txt is processed!
+file: BNC_CLEANED/A50.txt is processed!
+file: BNC_CLEANED/A27.txt is processed!
+file: BNC_CLEANED/A46.txt is processed!
+file: BNC_CLEANED/A4F.txt is processed!
+file: BNC_CLEANED/A9C.txt is processed!
+file: BNC_CLEANED/A3R.txt is processed!
+file: BNC_CLEANED/A69.txt is processed!
+file: BNC_CLEANED/A8G.txt is processed!
+file: BNC_CLEANED/A05.txt is processed!
+file: BNC_CLEANED/A32.txt is processed!
+file: BNC_CLEANED/A1P.txt is processed!
+file: BNC_CLEANED/A95.txt is processed!
+file: BNC_CLEANED/A5L.txt is processed!
+file: BNC_CLEANED/A70.txt is processed!
+file: BNC_CLEANED/A00.txt is processed!
+Repository bnc3 dumped in file bnc3.corp!
+training complete...
+testing BNC_CLEANED/A93.txt ...
+testing BNC_CLEANED/A9D.txt ...
+testing BNC_CLEANED/AA3.txt ...
+testing BNC_CLEANED/A3J.txt ...
+testing BNC_CLEANED/A55.txt ...
+testing BNC_CLEANED/A2C.txt ...
+testing BNC_CLEANED/A6R.txt ...
+testing BNC_CLEANED/A3M.txt ...
+testing BNC_CLEANED/A8C.txt ...
+testing BNC_CLEANED/A3U.txt ...
+testing BNC_CLEANED/A22.txt ...
+testing BNC_CLEANED/A7X.txt ...
+precision: 0.646175
+recall: 0.611554
+F value: 0.628388
+file: BNC_CLEANED/A8E.txt is processed!
+file: BNC_CLEANED/A9M.txt is processed!
+file: BNC_CLEANED/A45.txt is processed!
+file: BNC_CLEANED/A1A.txt is processed!
+file: BNC_CLEANED/A6L.txt is processed!
+file: BNC_CLEANED/A1F.txt is processed!
+file: BNC_CLEANED/A0A.txt is processed!
+file: BNC_CLEANED/A7S.txt is processed!
+file: BNC_CLEANED/A0V.txt is processed!
+file: BNC_CLEANED/A4W.txt is processed!
+file: BNC_CLEANED/A21.txt is processed!
+file: BNC_CLEANED/A5P.txt is processed!
+file: BNC_CLEANED/A57.txt is processed!
+file: BNC_CLEANED/AA2.txt is processed!
+file: BNC_CLEANED/A99.txt is processed!
+file: BNC_CLEANED/A10.txt is processed!
+file: BNC_CLEANED/A0G.txt is processed!
+file: BNC_CLEANED/A7J.txt is processed!
+file: BNC_CLEANED/A13.txt is processed!
+file: BNC_CLEANED/A82.txt is processed!
+file: BNC_CLEANED/A61.txt is processed!
+file: BNC_CLEANED/A0C.txt is processed!
+file: BNC_CLEANED/A58.txt is processed!
+file: BNC_CLEANED/A3H.txt is processed!
+file: BNC_CLEANED/A93.txt is processed!
+file: BNC_CLEANED/A9D.txt is processed!
+file: BNC_CLEANED/AA3.txt is processed!
+file: BNC_CLEANED/A3J.txt is processed!
+file: BNC_CLEANED/A55.txt is processed!
+file: BNC_CLEANED/A2C.txt is processed!
+file: BNC_CLEANED/A6R.txt is processed!
+file: BNC_CLEANED/A3M.txt is processed!
+file: BNC_CLEANED/A8C.txt is processed!
+file: BNC_CLEANED/A3U.txt is processed!
+file: BNC_CLEANED/A22.txt is processed!
+file: BNC_CLEANED/A7X.txt is processed!
+file: BNC_CLEANED/A50.txt is processed!
+file: BNC_CLEANED/A27.txt is processed!
+file: BNC_CLEANED/A46.txt is processed!
+file: BNC_CLEANED/A4F.txt is processed!
+file: BNC_CLEANED/A9C.txt is processed!
+file: BNC_CLEANED/A3R.txt is processed!
+file: BNC_CLEANED/A69.txt is processed!
+file: BNC_CLEANED/A8G.txt is processed!
+file: BNC_CLEANED/A05.txt is processed!
+file: BNC_CLEANED/A32.txt is processed!
+file: BNC_CLEANED/A1P.txt is processed!
+file: BNC_CLEANED/A95.txt is processed!
+file: BNC_CLEANED/A5L.txt is processed!
+file: BNC_CLEANED/A70.txt is processed!
+file: BNC_CLEANED/A00.txt is processed!
+Repository bnc2 dumped in file bnc2.corp!
+training complete...
+testing BNC_CLEANED/A75.txt ...
