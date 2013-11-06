@@ -43,13 +43,10 @@ string toLowerStr(string str) {
 }
 
 bool isEqual(string given, string obs) {
-	for(int i=0; i<given.length(); i++) {
-		if(given[i] == '-') {
-			return ((toLowerStr(obs) == toLowerStr(given.substr(0, i))) || (toLowerStr(obs) == toLowerStr(given.substr(i+1, given.length()-i-1))));
-		}
+	if(toLowerStr(given).find(toLowerStr(obs),0) != string::npos){
+		return true;
 	}
-
-	return (toLowerStr(given) == toLowerStr(obs));
+	return false;
 }
 
 void runTest(Repository r, string file_name, map<string, int> &acc, map<string, int> &tot,
